@@ -1,0 +1,12 @@
+﻿  tcpclient.cpp
+D:\proj\github\vipoker\api_example\tcpclient.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  tcpsock.cpp
+D:\proj\github\vipoker\api_example\tcpsock.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\proj\github\vipoker\api_example\tcpsock.cpp(153,33): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+D:\proj\github\vipoker\api_example\tcpsock.cpp(157,33): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  正在生成代码
+  110 of 114 functions (96.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  tcpclt_vs2019.vcxproj -> D:\proj\github\vipoker\api_example\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe

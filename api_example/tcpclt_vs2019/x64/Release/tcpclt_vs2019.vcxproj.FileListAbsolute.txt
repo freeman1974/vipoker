@@ -1,0 +1,2 @@
+D:\proj\gitwork\freeman\vipoker\test\TcpClient\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe
+D:\proj\github\vipoker\api_example\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe

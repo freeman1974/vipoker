@@ -1,0 +1,22 @@
+一、配置文件
+please refer to vipoker.conf 。配置文件自带注释。
+
+二、消息格式
+string字符串："28,4,44,23,21,25,34,5,55,55,55,10,16,38,41,42,7,13,32,26,9,"
+各个字符是按索引[0,n]来顺序排列的。
+站在摄像机的视角，从画面的左上角(x=0,y=0)开始，到右下角(x=width,y=height)。此牌位与荷官发牌顺序无关！
+按从左到右，从上到下对扑克牌进行排序，序号[0,n]。
+value_index:指扑克牌在全牌值列表中的索引[0,n]。-1:未识别。
+全牌值列表：
+["Club_A","Club_2","Club_3","Club_4","Club_5","Club_6","Club_7","Club_8","Club_9","Club_10","Club_J","Club_Q","Club_K,",
+"Diamond_A","Diamond_2","Diamond_3","Diamond_4","Diamond_5","Diamond_6","Diamond_7","Diamond_8","Diamond_9","Diamond_10","Diamond_J","Diamond_Q","Diamond_K",
+"Heart_A","Heart_2","Heart_3","Heart_4","Heart_5","Heart_6","Heart_7","Heart_8","Heart_9","Heart_10","Heart_J","Heart_Q","Heart_K",
+"Spade_A","Spade_2","Spade_3","Spade_4","Spade_5","Spade_6","Spade_7","Spade_8","Spade_9","Spade_10","Spade_J","Spade_Q","Spade_K",
+"back_0","back_1","back_2","null" ];
+ 
+识别结果采取流水线机制，识别线程按设定的FPS运行，不断刷新识别结果值。
+socket通信线程同时支持Tcp服务器模式和Tcp Client模式，在连接建立后，
+按FPS速度送出识别结果值。建立TCP长连接。但额外的握手协议是不必要的。
+直接使用socket的SO_KEEPALIVE机制。
+
+
